@@ -8,7 +8,7 @@ const T Milieu::white[] = {(T)255, (T)255, (T)255};
 Milieu::Milieu(int _width, int _height) : UImg(_width, _height, 1, 3),
                                           width(_width), height(_height)
 {
-
+   
    cout << "const Milieu" << endl;
    std::srand(time(NULL));
 }
@@ -25,7 +25,6 @@ void Milieu::step(void)
 
    for (std::vector<Creature>::iterator it = listeCreatures.begin(); it != listeCreatures.end(); ++it)
    {
-
       it->action(*this);
       it->draw(*this);
 
